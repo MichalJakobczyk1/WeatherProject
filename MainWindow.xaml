@@ -5,58 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="705" Width="1028">
     <Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="260"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
 
-            <!--Left Side-->
-            <Border CornerRadius="30 0 0 30" Background="#FFFFFF">
-                <StackPanel>
-                    <!--TextBox Search-->
-                    <Border BorderBrush="#d9d9d9" BorderThickness="1" CornerRadius="15" HorizontalAlignment="Center" Width="200" Margin="0 35 0 0">
-                        <Grid Margin="7 7">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="auto" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-
-                            <Image Source="/Images/explore.png" Height="18" Margin="5 0 0 0"/>
-                            <TextBlock x:Name="textSearch" MouseDown="textSearch_MouseDown" Text="Search ..." Style="{StaticResource textHint}"/>
-                            <TextBox Name="txtSearch" TextChanged="txtSearch_TextChanged" Style="{StaticResource textBox}"/>
-                        </Grid>
-                    </Border>
-
-                    <StackPanel Margin="50 60 0 0">
-                        <Image Source="/Images/sun_cloud.png" Width="140" HorizontalAlignment="Left" />
-                        <TextBlock Text="12°c" FontSize="46" Margin="0 20 0 0"/>
-                        <TextBlock Text="Monday, 16:00" FontSize="18" FontWeight="SemiBold" Margin="0 15 0 0"/>
-                        <Separator Background="#dadada" Margin="3 30 40 30" Height="0.8"/>
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="/Images/cloud.png" Width="20" Height="20"/>
-                            <TextBlock Text="Mostly Cloudy" FontSize="14" FontWeight="SemiBold" Margin="10 0 0 0" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" Margin="0 15 0 77">
-                            <Image Source="/Images/water.png" Width="20" Height="20"/>
-                            <TextBlock Text="Rain - 30%" FontSize="14" FontWeight="SemiBold" Margin="10 0 0 0" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
-
-                    <Border CornerRadius="15" Background="Black" Margin="30 0">
-                        <Border CornerRadius="15" Padding="0 30">
-                            <Border.Background>
-                                <ImageBrush ImageSource="/Images/q1.jpg" Stretch="Fill" Opacity="0.65"/>
-                            </Border.Background>
-
-                            <TextBlock Text="New York, NY, USA" Foreground="#FFFFFF" VerticalAlignment="Center" TextAlignment="Center" FontWeight="Bold" FontSize="14"/>
-                        </Border>
-                    </Border>
-
-                </StackPanel>
-            </Border>
+            <TextBlock 
+                x:Name="City"
+                Grid.Row="0"
+                Grid.Column="0"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="8"
+                FontSize="32"
+                >
+                Kraków
+            </TextBlock>
+            <Image
+                x:Name="WeatherImg"
+                Grid.Row="1"
+                Grid.Column="0"
+                Source="/Images/sun.png"
+                >
+            </Image>
+            <TextBlock
+                x:Name="Degrees"
+                Grid.Row="2"
+                Grid.Column="0"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="8"
+                FontSize="32"
+                >
+                22°
+            </TextBlock>
+            <TextBlock
+                x:Name="WeatherDescribe"
+                Grid.Row="3"
+                Grid.Column="0"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="8"
+                FontSize="32"
+                >
+                Słońce
+            </TextBlock>
+            <TextBlock
+                x:Name="Pressure"
+                Grid.Row="4"
+                Grid.Column="0"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="8"
+                FontSize="32"
+                >
+                1026Hpa
+            </TextBlock>
+            <TextBlock
+                x:Name="WindSpeed"
+                Grid.Row="5"
+                Grid.Column="0"
+                TextAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="8"
+                FontSize="32"
+                >
+               0,93 m/s
+            </TextBlock>
         </Grid>
     </Grid>
 </Window>
